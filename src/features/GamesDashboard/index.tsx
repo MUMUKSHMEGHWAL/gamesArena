@@ -92,6 +92,7 @@ class GamesDashboard extends React.Component<Props, State> {
     const { isLoading } = this.props;
     return (
       <div>
+        <h2>Game Arena</h2>
         <div>
         <input
             type="text"
@@ -106,20 +107,20 @@ class GamesDashboard extends React.Component<Props, State> {
           value={defaultOption}
           placeholder="sort" />
         </div>
-      {isLoading ? <p>Loading...</p> : data ? <section>
-        {data.map((game: GameData, index: number) => {
-          return (
-            <GameCard
-              key={`${game.title}${game.score}${index}`}
-              title={game.title}
-              platform={game.platform}
-              editors_choice={game.editors_choice}
-              genre={game.genre}
-              score={game.score}/>
-          );
-        })}
-      </section> : null
-      }
+        {isLoading ? <p>Loading...</p> : data ? <section>
+          {data.map((game: GameData, index: number) => {
+            return (
+              <GameCard
+                key={`${game.title}${game.score}${index}`}
+                title={game.title}
+                platform={game.platform}
+                editors_choice={game.editors_choice}
+                genre={game.genre}
+                score={game.score}/>
+            );
+          })}
+        </section> : null
+        }
       </div>
     );
   }
