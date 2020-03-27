@@ -63,9 +63,11 @@ export const StyledMain = styled.main`
     border: 1px solid #545353;
     border-radius: 10px;
     text-align: left;
+    background: #fff;
     .sectionTop {
       display: flex;
       position: relative;
+      padding-right:50px;
       .imgWrapper {
         height: 100px;
         width: 100px;
@@ -89,7 +91,6 @@ export const StyledMain = styled.main`
         .heading {
           font-size: 20px;
           margin-bottom: 7px;
-          padding-right:50px;
         }
         .desc {
           color: darkgrey;

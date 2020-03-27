@@ -20,8 +20,8 @@ function GameCard(props: Props) {
           <p className="desc">{platform}</p>
         </div>
         {editors_choice.toString() === 'y' ?
-          <div className="star-five" />
-          : <div className="star" dangerouslySetInnerHTML={createMarkup()} />
+          <div className="star" dangerouslySetInnerHTML={createMarkup()} />
+          : null
         }
       </div>
       <div className="sectionBottom">
