@@ -2,7 +2,6 @@
   "name": "games-arena",
   "description": "Project with typesafe-actions",
   "version": "0.1.0",
-  "license": "MIT",
   "main": "src/index.tsx",
   "scripts": {
     "reinstall": "rm -rf ./node_modules && npm install",
@@ -22,8 +21,6 @@
     "@types/react-router-dom": "5.1.2",
     "@types/react-router-redux": "5.0.18",
     "@types/styled-components": "^5.0.1",
-    "cuid": "2.1.6",
-    "jest": "24.9.0",
     "react": "16.11.0",
     "react-app-polyfill": "1.0.4",
     "react-dom": "16.11.0",
