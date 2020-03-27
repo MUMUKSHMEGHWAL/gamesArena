@@ -1,10 +1,7 @@
 {
-  "name": "typesafe-actions-reference-project",
-  "description": "Typesafe-Actions Reference Project",
+  "name": "games-arena",
+  "description": "Project with typesafe-actions",
   "version": "0.1.0",
-  "private": true,
-  "author": "Piotr Witek <piotrek.witek@gmail.com> (http://piotrwitek.github.io/)",
-  "repository": "https://github.com/piotrwitek/typesafe-actions-todo-app.git",
   "license": "MIT",
   "main": "src/index.tsx",
   "scripts": {

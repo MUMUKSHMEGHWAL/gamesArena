@@ -4,12 +4,19 @@ import styled from "styled-components";
 export const StyledMain = styled.main`
   margin: auto;
   max-width: 1024px;
-
+  .headerTab {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button {
+      height: 30px;
+    }
+  }
   .mainHeading {
+    font-size: 30px;
     color: green;
     text-align: left;
-    background: #fff;
-    padding: 20px;
+    padding: 20px 20px 20px 0px;
   }
 
   .container {
@@ -56,6 +63,15 @@ export const StyledMain = styled.main`
     flex-wrap: wrap;
     margin: 20px -10px 0;
   }
+
+  .platformHeader {
+    float: left;
+    padding-bottom: 2px;
+    color: orange;
+  }
+
+
+
   .gameCard {
     width: calc(50% - 20px);
     margin: 10px;
