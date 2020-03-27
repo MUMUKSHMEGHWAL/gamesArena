@@ -36,9 +36,9 @@ class GamesDashboard extends React.Component<Props, State> {
       data: null,
       searchString: '',
       options: [
-        {value: 'none', label: 'None'},
-        {value: 'score_low_to_high', label: 'Score: Low to high'},
-        {value: 'score_high_to_low', label: 'Score: high to low'},
+        { value: 'none', label: 'None' },
+        { value: 'score_low_to_high', label: 'Score: Low to high' },
+        { value: 'score_high_to_low', label: 'Score: high to low' },
       ],
       defaultOption: 'none',
       selectedSort: 'none',
@@ -88,38 +88,40 @@ class GamesDashboard extends React.Component<Props, State> {
   }
 
   render(): React.ReactNode {
-    const {options, defaultOption, data } = this.state;
+    const { options, defaultOption, data } = this.state;
     const { isLoading } = this.props;
     return (
-      <div>
-        <div>
-        <input
-            type="text"
-            value={this.state.searchString}
-            onChange={this.handleChange}
-            placeholder="type name of game"
-          />
-          <button onClick={this.clearSearch}>clear search</button>
-        <Dropdown
-          options={options}
-          onChange={this.onSortSelection}
-          value={defaultOption}
-          placeholder="sort" />
+      <div className="container">
+        <div className="filterWrapper">
+          <div className="btnAndInputWrapper">
+            <input
+              type="text"
+              value={this.state.searchString}
+              onChange={this.handleChange}
+              placeholder="type name of game"
+            />
+            <div className="crossBtn" onClick={this.clearSearch}><span>x</span></div>
+          </div>
+          <Dropdown
+            options={options}
+            onChange={this.onSortSelection}
+            value={defaultOption}
+            placeholder="sort" />
         </div>
-      {isLoading ? <p>Loading...</p> : data ? <section>
-        {data.map((game: GameData, index: number) => {
-          return (
-            <GameCard
-              key={`${game.title}${game.score}${index}`}
-              title={game.title}
-              platform={game.platform}
-              editors_choice={game.editors_choice}
-              genre={game.genre}
-              score={game.score}/>
-          );
-        })}
-      </section> : null
-      }
+        {isLoading ? <p>Loading...</p> : data ? <section className="gameCardsWrapper">
+          {data.map((game: GameData, index: number) => {
+            return (
+              <GameCard
+                key={`${game.title}${game.score}${index}`}
+                title={game.title}
+                platform={game.platform}
+                editors_choice={game.editors_choice}
+                genre={game.genre}
+                score={game.score} />
+            );
+          })}
+        </section> : null
+        }
       </div>
     );
   }

@@ -1,10 +1,11 @@
 import * as React from 'react';
 
 import GamesDashboard from '../features/GamesDashboard';
+import { StyledMain } from './styles';
 
 export default () => (
-  <main>
-    <h2>Game Arena</h2>
+  <StyledMain>
+    <h2 className="mainHeading">Game Arena</h2>
     <GamesDashboard />
-  </main>
+  </StyledMain>
 );
